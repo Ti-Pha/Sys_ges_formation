@@ -1,0 +1,87 @@
+/* Muted color overrides to remove bright Bootstrap colors */
+:root{
+    --muted-bg: #f7f7f7;
+    --muted-foreground: #495057;
+    --muted-accent: #6c757d;
+    --muted-muted: #adb5bd;
+    --muted-dark: #343a40;
+    --brand: #138f8f; /* Main solid brand color (teal, muted) */
+    --brand-contrast: #ffffff;
+}
+
+/* Backgrounds */
+.navbar, .bg-primary, .bg-success, .bg-danger, .bg-warning, .bg-info, .table-dark {
+    background-color: var(--brand) !important;
+    color: var(--brand-contrast) !important;
+}
+
+/* Buttons */
+.btn-primary, .btn-success, .btn-danger, .btn-warning, .btn-info {
+    background-color: var(--brand) !important;
+    color: var(--brand-contrast) !important;
+    border-color: rgba(0,0,0,0.05) !important;
+}
+.btn-primary:hover, .btn-success:hover, .btn-danger:hover, .btn-warning:hover, .btn-info:hover, .btn:hover {
+    background-color: #adb5bd !important; /* muted gray on hover */
+    color: var(--brand-contrast) !important;
+}
+
+/* Badges */
+.badge.bg-primary, .badge.bg-success, .badge.bg-danger, .badge.bg-warning, .badge.bg-info {
+    background-color: var(--brand) !important;
+    color: var(--brand-contrast) !important;
+}
+
+/* Alerts */
+.alert-info, .alert-success, .alert-danger, .alert-warning {
+    background-color: #f8f9fa !important;
+    color: var(--muted-foreground) !important;
+    border-color: #e9ecef !important;
+}
+
+/* If any element uses text-white on a muted bg, force readable muted text */
+.bg-primary.text-white, .bg-success.text-white, .bg-danger.text-white, .bg-warning.text-white, .bg-info.text-white,
+.card.bg-success.text-white, .card.bg-primary.text-white {
+    color: var(--muted-dark) !important;
+}
+
+/* Table header */
+.table-dark thead th {
+    background-color: var(--brand) !important;
+    color: var(--brand-contrast) !important;
+}
+
+/* Cards and shadows toned down */
+.card {
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06) !important;
+}
+
+/* Footer neutral */
+/* Footer styled to match brand */
+footer {
+    background-color: var(--brand) !important;
+    color: var(--brand-contrast) !important;
+}
+
+/* Navbar text */
+.navbar .nav-link, .navbar .navbar-brand, .navbar .user-info {
+    color: var(--brand-contrast) !important;
+}
+
+/* Ensure links are readable but not bright */
+a.nav-link {
+    color: var(--brand-contrast) !important;
+}
+
+/* Small role badge neutral */
+.badge-role {
+    background-color: rgba(255,255,255,0.12) !important;
+    color: var(--brand-contrast) !important;
+}
+
+/* Tweak stat number color */
+.stat-number {
+    color: var(--brand) !important;
+    font-size: 2rem;
+    font-weight: 700;
+}
