@@ -1,17 +1,17 @@
-# 📚 Système de Gestion de Formation Professionnelle - MVP
+# Système de Gestion de Formation Professionnelle - MVP
 
-## 📋 Description
+## Description
 Application MVP complète de gestion de formations professionnelles avec PHP/MySQL incluant:
-- ✅ Gestion des formations (CRUD)
-- ✅ Gestion des participants (CRUD)
-- ✅ Gestion des inscriptions
-- ✅ Évaluations avec calculs automatiques
-- ✅ Transactions TCL (BEGIN, COMMIT, ROLLBACK)
-- ✅ Champs calculés (note finale avec formule pondérée)
+- Gestion des formations (CRUD)
+- Gestion des participants (CRUD)
+- Gestion des inscriptions
+- Évaluations avec calculs automatiques
+- Transactions TCL (BEGIN, COMMIT, ROLLBACK)
+- Champs calculés (note finale avec formule pondérée)
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ### 1. Prérequis
 - XAMPP installé
@@ -32,7 +32,7 @@ http://localhost/Sys_ges_formation/
 
 ---
 
-## 📂 Structure du Projet
+## Structure du Projet
 
 ```
 Sys_ges_formation/
@@ -67,7 +67,7 @@ Sys_ges_formation/
 
 ---
 
-## 💾 Base de Données
+## Base de Données
 
 ### Tables principales
 
@@ -119,7 +119,7 @@ Sys_ges_formation/
 
 ---
 
-## 🔧 Champs Calculés
+## Champs Calculés
 
 ### Note Finale (Générée automatiquement en base de données)
 ```
@@ -130,13 +130,13 @@ NOTE_FINALE = (Note_Devoir × 30%) + (Note_Test × 50%) + (Note_Participation ×
 - Devoir: 15/20 → 15 × 0.30 = 4.50
 - Test: 16/20 → 16 × 0.50 = 8.00
 - Participation: 17/20 → 17 × 0.20 = 3.40
-- **Note Finale = 15.90/20** ✅
+- **Note Finale = 15.90/20** 
 
 La formule est intégrée dans MySQL avec `GENERATED ALWAYS AS` pour un calcul automatique et cohérent.
 
 ---
 
-## 🔐 Gestion des Transactions (TCL)
+## Gestion des Transactions (TCL)
 
 ### Implementation dans `functions.php`
 
@@ -187,39 +187,39 @@ try {
 
 ---
 
-## 📊 Fonctionnalités Principales
+## Fonctionnalités Principales
 
-### 🎓 Formations
-- ✅ Créer nouvelle formation
-- ✅ Voir détails avec participants inscrits
-- ✅ Modifier formation
-- ✅ Supprimer (suppression en cascade)
-- ✅ Statuts: planifiée, en_cours, terminée, annulée
+### Formations
+- Créer nouvelle formation
+- Voir détails avec participants inscrits
+- Modifier formation
+- Supprimer (suppression en cascade)
+- Statuts: planifiée, en_cours, terminée, annulée
 
-### 👥 Participants
-- ✅ Enregistrer nouveaux participants
-- ✅ Voir historique formations
-- ✅ Modifier profil
-- ✅ Supprimer (suppression en cascade)
-- ✅ Statuts: inscrit, en_cours, terminé, abandonné
+### Participants
+- Enregistrer nouveaux participants
+- Voir historique formations
+- Modifier profil
+- Supprimer (suppression en cascade)
+- Statuts: inscrit, en_cours, terminé, abandonné
 
-### 📈 Évaluations
-- ✅ Ajouter notes pour chaque participant
-- ✅ Calcul automatique note finale (30/50/20)
-- ✅ Détermination automatique du résultat
-- ✅ Gestion certificat
-- ✅ Visualisation des notes
+### Évaluations
+- Ajouter notes pour chaque participant
+- Calcul automatique note finale (30/50/20)
+- Détermination automatique du résultat
+- Gestion certificat
+- Visualisation des notes
 
-### 📊 Tableau de Bord
-- ✅ Statistiques globales
-- ✅ Nombre de formations
-- ✅ Nombre de participants
-- ✅ Nombre d'inscriptions
-- ✅ Nombre de réussis
+### Tableau de Bord
+- Statistiques globales
+- Nombre de formations
+- Nombre de participants
+- Nombre d'inscriptions
+- Nombre de réussis
 
 ---
 
-## 🎯 Instructions d'Utilisation
+## Instructions d'Utilisation
 
 ### 1. Accueil
 - Affichage du tableau de bord avec statistiques
@@ -250,7 +250,7 @@ Participant → list.php → [add.php | view.php | edit.php | delete.php]
 
 ---
 
-## 🔍 Exemple de Flux Complet
+## Exemple de Flux Complet
 
 ### Scénario: Évaluer un participant
 
@@ -267,24 +267,24 @@ Participant → list.php → [add.php | view.php | edit.php | delete.php]
    - `Évaluations → + Ajouter`
    - Sélectionner: Participant + Formation
    - Entrer notes: Devoir (15), Test (16), Participation (17)
-   - Note Finale auto = **15.90/20** ✅
-   - Résultat auto = **réussi** ✅
+   - Note Finale auto = **15.90/20** 
+   - Résultat auto = **réussi** 
    - Cocher "Certificat délivré"
    - **COMMIT**
 
 ---
 
-## 🛡️ Sécurité
+## Sécurité
 
-✅ Utilisation de **Prepared Statements** (protection SQL Injection)
-✅ Validation des entrées
-✅ Transactions ACID
-✅ Gestion des erreurs
-✅ Suppression en cascade sécurisée
+Utilisation de **Prepared Statements** (protection SQL Injection)
+Validation des entrées
+Transactions ACID
+Gestion des erreurs
+Suppression en cascade sécurisée
 
 ---
 
-## 📝 Notes Importantes
+##  Notes Importantes
 
 1. **Champs calculés:** La `note_finale` est définie dans MySQL comme colonne générée (`GENERATED ALWAYS AS`), garantissant le calcul automatique et la cohérence.
 
@@ -296,7 +296,7 @@ Participant → list.php → [add.php | view.php | edit.php | delete.php]
 
 ---
 
-## 🎨 Interface
+##  Interface
 
 - **Framework CSS:** Bootstrap 5
 - **Design:** Responsive et moderne
@@ -305,7 +305,7 @@ Participant → list.php → [add.php | view.php | edit.php | delete.php]
 
 ---
 
-## 📞 Support
+##  Support
 
 Pour toute question ou amélioration, consultez la structure du code ou les commentaires dans chaque fichier PHP.
 
